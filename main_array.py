@@ -30,10 +30,10 @@ def run():
     # Matrices
 
     print(matriz.__str__())
-
-    for row in range(matriz.get_height()):
-        for column in range(matriz.get_width()):
-            matriz[row][column] = row * column
+    matriz = [[row * column for column in range(matriz.get_width())] for row in range(matriz.get_height())]
+    # for row in range(matriz.get_height()):
+    #     for column in range(matriz.get_width()):
+    #         matriz[row][column] = row * column
     print(matriz)
 
     
